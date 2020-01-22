@@ -7,16 +7,10 @@ const app = express()
 const port = 3000
 
 app.get('/send-message', (req, res) => {
-    let randomNumber = randomNumberGenerator();
-    console.log(randomNumber);
-
-    const randomNumberGenerator = () => {
-        return Math.floor(Math.random() * Math.floor(10));
-    }
     
     client.messages
         .create({
-            body: randomNumber,
+            body: Math.floor(Math.random() * Math.floor(10)),
             from: '+12017194679',
             to: '+6198519017'
         })
