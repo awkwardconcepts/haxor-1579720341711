@@ -7,6 +7,7 @@ const app = express()
 const port = 3000
 
 app.get('/send-message', (req, res) => {
+    console.log("handling send-message");
     
     client.messages
         .create({
