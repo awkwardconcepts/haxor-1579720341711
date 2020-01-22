@@ -4,7 +4,7 @@ const authToken = '491970a9682f855e55e4b8e15190a024';
 const client = require('twilio')(accountSid, authToken);
 
 const app = express()
-const port = 3000
+const port = 3001
 
 app.get('/send-message', (req, res) => {
     console.log("handling send-message");
