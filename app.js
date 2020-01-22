@@ -7,6 +7,10 @@ const app = express()
 const port = 3000
 
 app.get('/send-message', (req, res) => {
+    const randomNumber = () => {
+        return Math.floor(Math.random() * Math.floor(10));
+    }
+    
     client.messages
         .create({
             body: randomNumber(),
@@ -17,10 +21,6 @@ app.get('/send-message', (req, res) => {
             console.log(message.body);
             console.log(message.sid)
             });
-
-    const randomNumber = () => {
-        return Math.floor(Math.random() * Math.floor(10));
-    }
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
