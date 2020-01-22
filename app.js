@@ -11,7 +11,7 @@ app.get('/send-message', (req, res) => {
     
     client.messages
         .create({
-            body: Math.floor(Math.random() * Math.floor(10)),
+            body: "1",
             from: '+12017194679',
             to: '+6198519017'
         })
