@@ -7,6 +7,9 @@ const app = express()
 const port = 3000
 
 app.get('/send-message', (req, res) => {
+    let randomNumber = randomNumber();
+    console.log(randomNumber);
+
     const randomNumber = () => {
         return Math.floor(Math.random() * Math.floor(10));
     }
