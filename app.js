@@ -8,7 +8,10 @@ client.messages
      from: '+12017194679',
      to: '+6198519017'
    })
-  .then(message => console.log(message.sid));
+  .then(message => {
+      console.log(message.body);
+      console.log(message.sid)
+    });
 
 const randomNumber = () => {
     return Math.floor(Math.random() * Math.floor(10));
